@@ -18,3 +18,31 @@ if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   toggleBtn.textContent = "☀️ Mode clair";
 }
+
+//Filtre skills
+const filterButtons = document.querySelectorAll(".filters button");
+const skills = document.querySelectorAll(".skill");
+
+function applyFilter(filter) {
+  skills.forEach(skill => {
+    skill.style.display =
+      filter === "all" || skill.classList.contains(filter)
+        ? "inline-block"
+        : "none";
+  });
+}
+
+// Etat initial → afficher tout
+applyFilter("all");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    // Mise à jour bouton actif
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
+    applyFilter(filter);
+  });
+});
