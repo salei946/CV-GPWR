@@ -77,3 +77,23 @@ footer {
   color: white;
   padding: 1rem;
 }
+
+/* CSS dark mode */
+
+.dark {
+  background: #121212;
+  color: #eee;
+}
+
+.dark section {
+  background: #1f1f1f;
+}
+
+.dark header,
+.dark footer {
+  background: #000814;
+}
+
+.dark .contact-list a {
+  color: #90dbf4;
+}
