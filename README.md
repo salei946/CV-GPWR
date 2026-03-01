@@ -56,8 +56,9 @@ main
 ---
 
 ## 🏷️ Version
-V1.0
-Première release stable du projet.
+
+- **v1.0.0** – Première release stable
+- **v1.0.1** – Mise à jour de la documentation (README)
 
 ---
 
